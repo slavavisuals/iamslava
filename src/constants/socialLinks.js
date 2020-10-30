@@ -6,7 +6,10 @@ import {
   FaFacebookSquare,
   FaTwitterSquare,
   FaInstagramSquare
-} from "react-icons/fa"
+} from "react-icons/fa";
+
+
+
 
 const data = [
   {
@@ -17,7 +20,7 @@ const data = [
   {
     id: 3,
     icon: <FaRegFilePdf className="social-icon"></FaRegFilePdf>,
-    url: "https://www.amazon.com/clouddrive/share/V5urSg1GNRKHcccTdIuaFB895KNc7Kra3xvyD6MN2tW",
+    url: "slava-resume.pdf",
   },
   {
     id: 4,
@@ -50,8 +53,10 @@ const links = data.map(link => {
   )
 })
 
+
 export default ({ styleClass }) => {
   return (
+
     <ul className={`social-links ${styleClass ? styleClass : ""}`}>{links}</ul>
   )
 }

@@ -15,6 +15,8 @@ const query = graphql `
   }
 }
 `
+
+
 const Hero = () => {
     const {
         file: {
@@ -22,9 +24,12 @@ const Hero = () => {
                 fluid
             }
         }
+
     } = useStaticQuery(query)
 
     return (
+
+
         <header className="hero">
             <div className="section-center hero-center">
                 <article className="hero-info">
