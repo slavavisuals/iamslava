@@ -3,9 +3,13 @@
  *
  * See: https://www.gatsbyjs.org/docs/gatsby-config/
  */
-require("dotenv").config({
-  path: `.env.${process.env.NODE_ENV}`,
+// require("dotenv").config({
+//   path: `.env.${process.env.NODE_ENV}`,
+// })
+require('dotenv').config({
+  path: `.env.${process.env.NODE_ENV || 'development'}`
 })
+
 
 module.exports = {
   siteMetadata: {
@@ -32,7 +36,12 @@ module.exports = {
       resolve: `gatsby-source-strapi`,
       options: {
         apiURL: process.env.API_URL,
+        //apiURL: process.env.API_URL || "http://localhost:1337",
+        //apiURL: "http://localhost:1337",
         queryLimit: 1000, // Default to 100
+        //   contentTypes : `jobs`, `projects`, `blogs`,
+        //   singleType : `about`
+        //  ONLY ADD TO ARRAY IF YOU HAVE DATA IN STRAPI !!!!
         contentTypes: [`jobs`,`projects`,`blogs`,],
         singleTypes: [`about`],
       },
