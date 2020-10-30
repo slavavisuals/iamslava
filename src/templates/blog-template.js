@@ -35,4 +35,5 @@ export const query = graphql`
   }
 `
 
-export default ComponentName
+export default ComponentName;
+

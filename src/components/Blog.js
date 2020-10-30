@@ -22,4 +22,4 @@ const Blog = ({id, title, image, date, category, slug, desc}) => {
 
 Blog.propTypes = {}
 
-export default Blog
+export default Blog;
